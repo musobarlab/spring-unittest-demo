@@ -81,6 +81,17 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
+				<executions>
+                    <execution>
+                        <id>report</id>
+                        <goals>
+                            <!--<goal>report-aggregate</goal>-->
+                            <goal>report</goal>
+                        </goals>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+
 			</plugin>
 		</plugins>
 	</build>
