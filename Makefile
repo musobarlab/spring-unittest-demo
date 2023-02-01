@@ -8,3 +8,7 @@ package:
 
 test:
 	mvn test -Dspring.profiles.active=test
+
+cover:
+	mvn -Dspring.profiles.active=test -Dsonar.host.url=${SONAR_HOST} -Dsonar.login=${SONAR_LOGIN} clean verify sonar:sonar
+	# mvn -Dspring.profiles.active=test clean verify sonar:sonar
